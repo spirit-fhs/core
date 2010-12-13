@@ -1,0 +1,80 @@
+Spirit-Core:
+============
+
+Spirit-Core is a Timetabling-Tool prototype for the faculty 
+of computer science at the applied university of smalcalda in thuringia, 
+germany. The whole project was written in Haskell, a functional programming
+language. 
+
+Programm Requirements:
+----------------------
+- Linux or Windows
+- The Glasgow Haskell Compiler from http://www.haskell.org/ghc/
+- Cabal from http://www.haskell.org/cabal/
+
+Structure of the faculty:
+-------------------------
+
+- The faculty offers five different courses of studies.
+- The courses of studies are forked into groups.
+- The groups can have lectures with other groups from different courses of
+  studies.
+- A lecture can have more than one lecturer. The lecture has also a list of 
+  equipment which is needed for a lesson.
+- A room has a number of seats and different equipment, for example a beamer or
+  computers.
+- Every lecturer has special days in a normal workweek in which he has to 
+  be at the faculty. The lecturers can even choose the days at the beginning
+  of a semester. They can also choose the timeslots when they want to 
+  give a lesson.
+- The applied university has some rooms with different sizes and also
+  different equipment which can be used by the faculties.
+
+How does the prototype work:
+---------------------------
+
+Step 1:
+ - The programm generates a list of all lectures with all possible rooms,
+   days, timeslots etc..
+
+Step 2:
+ - Then a list of lists with some different possibilities for one lecture
+   is generated.
+
+Step 3: 
+ - After that the lectures will be sorted by the size of the groups which 
+   are part of the lecture. That`s very important because now the programm
+   tries to schedule the biggest lecture at first. Also the lectures will 
+   be sorted by room-economy. 
+
+Step 4:
+ - Now there is no way for more constrains on the lectures.
+   Building the cross product for the entire list, will return a List
+   with valid and non-valid schedules.
+
+Step 5:
+ - In the last step we filter the list by clashes between room, day, time 
+   students and lecturers. The result is a list with all valid 
+   timetables. 
+
+Installation:
+-------------
+
+Linux:
+ - You can use the makefile in the project-dir
+
+  $ make
+  $ make install
+  $ ./spiritcore
+
+Windows:
+ - follow the instruction on the Cabal-site
+
+
+
+
+
+
+
+
+
