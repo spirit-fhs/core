@@ -1,6 +1,6 @@
 module Main where
 
-import IO
+import System.IO
 import System.Exit
 import Data.Lectures
 import Data.DB

@@ -10,6 +10,4 @@ maintainer:         spirit@unsane.org
 
 executable spiritcore
   main-is:          SpiritCore.hs
-  build-depends:    base >= 3 && < 5,
-                    haskell98
-
+  build-depends:    base

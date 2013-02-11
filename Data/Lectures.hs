@@ -1,6 +1,6 @@
 module Data.Lectures where
 
-import List
+import Data.List
 import Data.Room
 import Data.Day
 import Data.Time
